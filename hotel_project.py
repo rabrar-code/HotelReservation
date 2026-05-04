@@ -36,16 +36,6 @@ class Hotel(db.DBbase):
             print("An error has occured.", e)
     
 
-
-#following code will create the database, make hotels table and insert data
-
-#hotel = Hotel()
-#hotel.reset_database()
-#hotel.add_hotel("Py Charming Resort", "abc street")
-#hotel.add_hotel("Pylance Inn", "def street")
-#hotel.add_hotel("Residence Inn", "123 street")
-
-
 #The Room class will create rooms table in the hotel_reservation database.
 #rooms table will hold info about room types in each hotel.
 class Room(db.DBbase):
@@ -86,25 +76,6 @@ class Room(db.DBbase):
             print(f"{room_type} added to {hotel_id}")
         except Exception as e:
             print("An error adding room.", e)
-
-#room = Room()
-#room.reset_database()
-
-#The following code will add three types of rooms for the 1st hotel named Py Charming Resort(hotel_id 1)
-#room.add_room(1, "2 Queen Beds", 20, 289)
-#room.add_room(1, "1 King Bed", 20, 297)
-#room.add_room(1, "1 King Bed- Executive Lounge Access", 10, 333)
-
-#The following code will add two types of rooms for the 2nd hotel named Pylance Inn (hotel_id 2)
-#room.add_room(2, "Queen Room with Two Queen Beds", 30, 279)
-#room.add_room(2, "Studio King Suite", 15, 350)
-
-
-#The following code will add three types of rooms for the 3rd hotel named Residence Inn (hotel_id 3)
-#room.add_room(3, "Standard King", 28, 429)
-#room.add_room(3, "Standard Queen", 32, 419)
-#room.add_room(3, "Suite", 10, 505)
-
 
 #this Customer class will create a customers table and hold customer info
 class Customer(db.DBbase):
@@ -158,19 +129,6 @@ class Customer(db.DBbase):
                          print(ex)
                print(f"{number_of_rows} customers added successfully")
 
-#customer = Customer()
-#customer.reset_database()
-
-#Adding the following customers to the 'customers' table-
-#customer.add_customer("John Doe", "john@somewhere.com")
-#customer.add_customer("Liam Smith", "Liam@somewhere.com")
-#customer.add_customer("Mia Johnson")
-#customer.add_customer("Emily Harris", "emily@somewhere.com")
-
-#Adding customer from a file
-#customer.add_customer_from_file("customers.csv")
-
-
 
 #The Reservation class is going to create a reservations table in the same database.
 class Reservation(db.DBbase):
@@ -203,9 +161,51 @@ class Reservation(db.DBbase):
             super().close_db()
 
 
-reservation = Reservation()
-#reservation.reset_database()
-
 #The logic for checking availability and creating reservation will be handled by a separate class in a separate file
 #add_reservation was not tested here!
+
+if __name__ == "__main__":
+    # Create the database and tables
+    #following code will create the database, make hotels table and insert data
+
+    hotel = Hotel()
+    hotel.reset_database()
+    hotel.add_hotel("Py Charming Resort", "abc street")
+    hotel.add_hotel("Pylance Inn", "def street")
+    hotel.add_hotel("Residence Inn", "123 street")
+
+    room = Room()
+    room.reset_database()
+
+    #The following code will add three types of rooms for the 1st hotel named Py Charming Resort(hotel_id 1)
+    room.add_room(1, "2 Queen Beds", 20, 289)
+    room.add_room(1, "1 King Bed", 20, 297)
+    room.add_room(1, "1 King Bed- Executive Lounge Access", 10, 333)
+
+    #The following code will add two types of rooms for the 2nd hotel named Pylance Inn (hotel_id 2)
+    room.add_room(2, "Queen Room with Two Queen Beds", 30, 279)
+    room.add_room(2, "Studio King Suite", 15, 350)
+
+
+    #The following code will add three types of rooms for the 3rd hotel named Residence Inn (hotel_id 3)
+    room.add_room(3, "Standard King", 28, 429)
+    room.add_room(3, "Standard Queen", 32, 419)
+    room.add_room(3, "Suite", 10, 505)
+
+    customer = Customer()
+    customer.reset_database()
+
+    #Adding the following customers to the 'customers' table-
+    customer.add_customer("John Doe", "john@somewhere.com")
+    customer.add_customer("Liam Smith", "Liam@somewhere.com")
+    customer.add_customer("Mia Johnson")
+    customer.add_customer("Emily Harris", "emily@somewhere.com")
+
+    #Adding customer from a file
+    #customer.add_customer_from_file("customers.csv")
+
+    reservation = Reservation()
+    reservation.reset_database()
+
+
 

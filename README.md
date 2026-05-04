@@ -5,8 +5,8 @@ A desktop management suite built in Python that handles multi-hotel bookings, ro
 ---
 
 ## 📸 Demo
-![Application Screenshot or GIF](./path/to/your/demo-image.gif)
-*Show the main dashboard or a guest being added to the database.*
+![Hotel System Demo](demo.gif)
+
 
 ## 🚀 Key Features
 - **Dynamic Hotel Management**: Supports multiple properties, each with unique room types and pricing.
@@ -34,15 +34,31 @@ To view the code in action or run it locally:
 
 1. **Clone the repo**:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/rabrar-code/HotelReservation
    ```
 2. **Initialize the Database**:
-   1. Uncomment the test lines in hotel_project.py or run your main script to generate hotel_reservation.sqlite.
+   Code to generate hotel_reservation.sqlite.
+   ```bash
+   python hotel_project.py
+   ```
 
 3. **Run the App**:
    ```bash
-   python3.13 GUI_hotel.py
+   python GUI_hotel.py
    ```
 
+### 🍎 Note for macOS Users
+This application requires **Python 3.13** on macOS to ensure proper compatibility with the **Tkinter** framework. Standard macOS Python versions may experience GUI rendering issues.
+
+1.  **Check your Python version**:
+    ```bash
+    python3 --version
+    ```
+2.  **Run the scripts using Python 3.13**:
+    *   **Setup Database**: `python3.13 hotel_project.py`
+    *   **Launch App**: `python3.13 GUI_hotel.py`
+
+*Note: For Windows/Linux, any standard Python 3.10+ installation should work as expected.*
+
 ---
-*Created by Raisa Abrar - [Your LinkedIn/Portfolio Link]*
+*Created by Raisa Abrar - www.linkedin.com/in/raisa-abrar-62450646*
