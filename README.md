@@ -6,6 +6,24 @@ A desktop management suite built in Python that handles multi-hotel bookings, ro
 
 ## 📸 Demo
 ![Hotel System Demo](demo.gif)
+### 🛠️ Edge Case Handling & Logic
+<details>
+  <summary><b>View: Overbooking Prevention Demo</b></summary>
+  <p>The system checks every date in the requested range and blocks the booking if any single day is at capacity.</p>
+  <img src="demo1.gif" width="600">
+</details>
+
+<details>
+  <summary><b>View: Input Validation Demo</b></summary>
+  <p>Prevents past-date check-ins </p>
+  <img src="demo2.gif" width="600">
+</details>
+
+<details>
+  <summary><b>View: Input Validation Demo</b></summary>
+  <p>Prevents check-out date before check-in date </p>
+  <img src="demo3.gif" width="600">
+</details>
 
 
 ## 🚀 Key Features
